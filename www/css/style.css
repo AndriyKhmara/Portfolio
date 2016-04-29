@@ -1,0 +1,47 @@
+body {
+	background: url('../img/output_48m1iZ.gif') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.wrapper {
+	max-width: 2560px;
+	width: 80%;
+	margin: auto;
+}
+div.menu {
+	height: 700px;
+	background: black;
+	opacity: 0.7;	
+}
+div.block{
+	height: 600px;
+	background: green;
+	opacity: 0.7;
+}
+.affix {
+  top: 0;
+
+}
+
+@media only screen and (max-width : 1200px) {
+  .affix {
+  
+  z-index: 100;
+  }
+}
+@media only screen and (max-width : 640px) {
+	div.menu {
+		height: 200px;
+	}
+	.col-sm-12 ul {
+		width: 100%;
+	}
+	.col-sm-12 ul li{
+		display: inline;
+		width: 30%;
+		padding: 0 1%;
+	}
+	.nav>li>a{
+		display: inline;
+	}
+}
