@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bgstretcher.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	
 	<script>
@@ -17,54 +18,145 @@
 		  });
 		});
 	</script>
+	<script type="text/javascript">
+	$(function() {
+		 $.backstretch([
+      					"img/back_1.jpg", 
+      					"img/back_2.jpg", 
+      					"img/back_3.jpg"], {duration: 10000, fade: 750});
+	});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("p.extend").hide();
+			$("a.click").click(function(){
+				$("p.extend").slideToggle();
+			});
+			/*$("a.click").click(function(e){
+				$(e.target).parent().children("p.extend").slideToggle();
+			});*/
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("p.extend2").hide();
+			$("a.click2").click(function(){
+				$("p.extend2").slideToggle();
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				$("div#upButton").hide();
+				if ($("body").scrollTop() > 0) $("div#upButton").show();
+			});			
+			$("#button").click(function() {
+				var y_pos = $("#bgPage").offset().top;
+				$("body").scrollTop(y_pos);
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#clickIMG").click(function(){
+				$("#popup").show(400);
+				$("#hover").show();
+			});
+			$("#hover").click(function (){
+				$("#popup").css("display","none");
+				$("#hover").css("display","none");		
+		});
+});
+	</script>
   </head>
-  <body data-spy="scroll" data-target="#myScrollspy">
-  <div class="wrapper">
+<body data-spy="scroll" data-target="#myScrollspy">
+	<div class="wrapper" id="bgPage">
 		<div class="container-fluid">
 			<div class="row">
-			    <div id="left" class="col-xs-12 col-lg-4">		
-			      	<div id="myAffix" data-spy="affix" data-offset-top="0" >
-			        	<div class="menu"> 
-			        		<div class="row">
-			        			<nav class="col-sm-12" id="myScrollspy">
+				<div id="left" class="col-xs12 col-lg-5">
+					<div id="myAffix" data-spy="affix" data-offset-top="0" >
+						<div class="menu">
+							<div class="row">
+			        			<nav class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="myScrollspy">
 			        				<div id="logo">	
 			        					<h1>ANDRIY KHMARA</h1>
 										<h2>WEB DISIGNER</h2>
 									</div>
-									<ul class="nav nav-pills nav-stacked test" data-spy="affix-top" data-offset-top="100">
-										<li><a href="#section1">Section 1</a></li>
-										<li><a href="#section2">Section 2</a></li>
-										<li><a href="#section3">Section 3</a></li>		
+									<ul class="nav nav-pills nav-stacked navList" data-spy="affix-top" data-offset-top="100">
+										<li><a href="#section1">Особисті якості</a></li>
+										<li><a href="#section2">Навички</a></li>
+										<li><a href="#section3">Роботи</a></li>		
 									</ul>
 								</nav>
 			        		</div>
-			        	</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-lg-7">
+					<div class="row">
+						<div class="row">
+					    	<div class="col-lg-12">
+					    		<div class="block1" id="section1">
+							    	<div id="mainIMG">
+							    		<img src="img/profile.jpg" alt="foto"/>
+							    		<div class="section1">
+							    			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+							    			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+							    			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+							    		</div>
+							    	</div>
+					    		</div>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-lg-12">
+					    		<div class="blockAdm blockPaddingTop" id="section2">
+							    	<a class="click">
+							    		<div class="lineText">
+							    			<p>Адміністрування</p>
+							    		</div>
+							    	</a>
+							    	<p class="extend">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+					    		</div>
+					    		<div class="blockWEB blockPaddingBottom">
+							    	<a class="click2">
+							    		<div class="lineText">
+							    			<p>WEB designe</p>
+							    		</div>
+							    	</a>
+							    	<p class="extend2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+					    		</div>
+					    	</div>
+					    </div>	
+					    <div class="row">
+					    	<div class="col-lg-12" id="section3">
+					    		<div class="row blockPaddingBottom">
+					    			<div class="col-lg-4">
+					    				<a id="clickIMG">
+					    					<img src="img/work_photos_01_thumb.jpg" alt="workFoto" class="workIMG"/>
+					    				</a>
+					    			</div>
+					    			<div class="col-lg-4">
+					    				<img src="img/work_photos_04_thumb.jpg" alt="workFoto" class="workIMG"/>
+					    			</div>
+					    			<div class="col-lg-4">
+					    				<img src="img/work_photos_03_thumb.jpg" alt="workFoto" class="workIMG"/>
+					    			</div>
+					    		</div>
+					    		<div id="popup">
+					    			<img src="img/work_photos_01.jpg" alt="large work IMG"/>
+					    		</div>
+					    		<div id="hover"></div>
+					    	</div>
+					    </div>				    		
 			      	</div>
-			    </div>
-			    <div class="col-xs-12 col-lg-8">
-			      	<div class="row">
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block" id="section1">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block" id="section2">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block">Основное содержимое...</div>
-					    <div class="block" id="section2">Основное содержимое...959059</div>
-			      	</div>
-			    </div>
+				</div>
 			</div>
 		</div>
-</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.js"></script>
-  </body>
+	</div>
+  	<div id="upButton">
+  		<a id="button">Top</a>
+  	</div>
+</body>
 </html>
