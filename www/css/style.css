@@ -11,6 +11,18 @@ body {
 div.container-fluid {
 	padding: 0;
 }
+.rowTest {
+	width: 100%;
+}
+.clearBlock {
+	display: none;
+}
+.paddingLeft {
+	padding-left: 10px;
+}
+.paddingRight {
+	padding-right: 10px;
+}
 div.menu {
 	height: 100vh;
 	background: black;
@@ -32,7 +44,9 @@ div.row nav {
 .affix {
   top: 0;
 }
-
+.paddingNull {
+	padding: 0;
+}
 #logo h1, #logo h2 {
 	color: white;
 	text-align: right;
@@ -133,6 +147,15 @@ a#button:hover div#upButton{
 #popup img{
 	width: 100%;
 }
+footer {
+    width: 63%;
+    height: 42px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+}
 
 
 
@@ -160,7 +183,8 @@ a#button:hover div#upButton{
 	
 	.nav>li>a{
 		display: inline;
-		float: right;
+		float: left;
+		margin: auto;
 	}
 	nav {
 		background: black;			
@@ -208,5 +232,14 @@ a#button:hover div#upButton{
 		padding-left: 5px;
 		padding-right: 5px;
 	}
-
+	.clearBlock {
+		display: block;
+		opacity: 0;
+		height: 200px;
+	}
+	nav ul li a {
+		font-size: 0.8em;
+		text-align: center;
+		margin-right: 3px;
+	}
 }

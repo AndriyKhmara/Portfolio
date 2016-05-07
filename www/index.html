@@ -9,6 +9,7 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bgstretcher.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
 	
 	<script>
 		$(function(){
@@ -58,7 +59,9 @@
 		});
 	</script>
 	<script type="text/javascript">
-		$(document).ready(function() {
+
+	$(document).ready(function() {
+		if (screen.width > 480) {
 			$("#clickIMG").click(function(){
 				$("#popup").show(400);
 				$("#hover").show();
@@ -66,39 +69,44 @@
 			$("#hover").click(function (){
 				$("#popup").css("display","none");
 				$("#hover").css("display","none");		
-		});
-});
+			});
+		};
+		
+			
+	});
 	</script>
   </head>
 <body data-spy="scroll" data-target="#myScrollspy">
 	<div class="wrapper" id="bgPage">
 		<div class="container-fluid">
-			<div class="row">
-				<div id="left" class="col-xs12 col-lg-5">
+			<div class="rowTest">
+				<div id="left" class="col-xs12 col-lg-5 paddingNull">
 					<div id="myAffix" data-spy="affix" data-offset-top="0" >
 						<div class="menu">
-							<div class="row">
-			        			<nav class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="myScrollspy">
+							<div class="rowTest">
+			        			<nav class="col-xs-12 col-sm-12 col-md-12 col-lg-12 paddingNull" id="myScrollspy">
 			        				<div id="logo">	
 			        					<h1>ANDRIY KHMARA</h1>
 										<h2>WEB DISIGNER</h2>
 									</div>
 									<ul class="nav nav-pills nav-stacked navList" data-spy="affix-top" data-offset-top="100">
-										<li><a href="#section1">Особисті якості</a></li>
-										<li><a href="#section2">Навички</a></li>
-										<li><a href="#section3">Роботи</a></li>		
+										<li><a href="#section1">Особисті якості <i class="fa fa-newspaper-o" aria-hidden="true"></i></a></li>
+										<li><a href="#section2">Навички <i class="fa fa-refresh fa-spin" aria-hidden="true"></i></a></li>
+										<li><a href="#section3">Роботи <i class="fa fa-briefcase" aria-hidden="true"></i></a></li>		
 									</ul>
 								</nav>
 			        		</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-lg-7">
-					<div class="row">
-						<div class="row">
-					    	<div class="col-lg-12">
-					    		<div class="block1" id="section1">
-							    	<div id="mainIMG">
+				<div class="col-xs-12 col-lg-7 paddingNull">
+					<div class="rowTest">
+						<div class="rowTest">
+					    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 paddingNull" id="section1">
+					    		<div class="clearBlock"></div>
+					    		<div class="block1" >
+					    			
+							    	<div id="mainIMG" class="paddingLeft paddingRight">
 							    		<img src="img/profile.jpg" alt="foto"/>
 							    		<div class="section1">
 							    			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
@@ -109,9 +117,10 @@
 					    		</div>
 					    	</div>
 					    </div>
-					    <div class="row">
-					    	<div class="col-lg-12">
-					    		<div class="blockAdm blockPaddingTop" id="section2">
+					    <div class="rowTest">
+					    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 paddingNull" id="section2">
+					    		<div class="clearBlock"></div>
+					    		<div class="blockAdm blockPaddingTop ">
 							    	<a class="click">
 							    		<div class="lineText">
 							    			<p>Адміністрування</p>
@@ -129,9 +138,10 @@
 					    		</div>
 					    	</div>
 					    </div>	
-					    <div class="row">
-					    	<div class="col-lg-12" id="section3">
-					    		<div class="row blockPaddingBottom">
+					    <div class="rowTest">					    
+					    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="section3">
+					    		<div class="clearBlock"></div>
+					    		<div class="rowTest blockPaddingBottom">
 					    			<div class="col-lg-4">
 					    				<a id="clickIMG">
 					    					<img src="img/work_photos_01_thumb.jpg" alt="workFoto" class="workIMG"/>
@@ -153,6 +163,9 @@
 			      	</div>
 				</div>
 			</div>
+			<footer>
+				<p class="copy">© Andriy Khmara. All Rights Reserved.</p>
+			</footer>
 		</div>
 	</div>
   	<div id="upButton">
