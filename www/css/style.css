@@ -28,7 +28,7 @@ div.row{
 	margin-right: auto;	
 }
 .marginBlock {
-	min-height: 120vh;
+	min-height: 110vh;
 	padding-top: 20vh;
 	margin-top: 20vh;
 }
@@ -155,7 +155,7 @@ ul.basicQuality li {
 }
 .lineText p {
 	color: white;
-	font-weight: 700;
+	
 	font-size: 1.3em;
 	font-family: 'Open Sans';
 	text-align: center;
@@ -309,10 +309,9 @@ a#button:hover div#upButton{
 	color: #222222;
 }
 footer {
-    width: 63%;
-    height: 42px;
-    display: none;
-    position: fixed;
+    text-align: right;
+    height: 42px;    
+    position: static;
     bottom: 0;
     right: 0;
     z-index: 100000;
@@ -472,6 +471,12 @@ footer {
 		height: 320px;	
 		margin-left: -240px;
 		margin-top: -160px;
+	}
+	.empty2 {
+		display: none;
+	}
+	footer {
+    	text-align: center;
 	}
 }
 
