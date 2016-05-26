@@ -9,6 +9,10 @@
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans/OpenSans-Light.ttf'), url('../fonts/OpenSans/OpenSans-Light.eot'), url('../fonts/OpenSans/OpenSans-Light.woff');
 }
+@font-face {
+	font-family: 'Chunkfive';
+	src: url('../fonts/Chunkfive/Chunkfive.otf'), url('../fonts/Chunkfive/Chunkfive.eot'), url('../fonts/Chunkfive/Chunkfive.ttf'), url('../fonts/Chunkfive/Chunkfive.woff');
+}
 /*******************************************************************************/
 /*---------------------------------   GRID   ---------------------------------*/
 /*******************************************************************************/   
@@ -60,24 +64,28 @@ div.row{
 	padding-right: 0;
 }
 .formBlock {
-	padding-bottom: 0.1px;
+	padding-bottom: 75px;
 }
 p {
 	color: white;
 	font-size: 1em;
 	font-family: 'Open Sans';
+	margin-bottom: 0;
 }
 h1 {
 	font-size: 2.5em;
-	font-family: 'Montserrat';
+	font-family: 'Chunkfive';
 	letter-spacing: 0.1em;	
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+	padding-right: 15px;
+	margin-top: 95px;
 }
 h2 {
-	font-size: 2.1em;
-	font-family: 'Montserrat';
+	padding-right: 15px;
+	font-size: 1.8em;
+	font-family: 'Chunkfive';
 	letter-spacing: 0.1em;	
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+	
 }
 /*******************************************************************************/
 /*---------------------------------   NAV MENU ---------------------------------*/
@@ -99,6 +107,12 @@ div.row nav {
 .paddingNull {
 	padding: 0;
 }
+.fa {
+	display: none;
+}
+.iconVisible {
+	display: inline-block;
+}
 h2 {
 	color: white;
 }
@@ -113,6 +127,7 @@ h2 {
 
 .navList li a{
 	text-decoration: none;
+	text-transform: uppercase;
 	font-size: 1em;
 	color: rgb(122,122,122);
 }
@@ -140,7 +155,12 @@ h2 {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
 }
 .section1 div ul li {
+	text-align: justify;
+    padding-right: 30px;
 	color: white;
+}
+.invisible {
+	width: 100%;
 }
 
 ul.basicQuality li {
@@ -151,11 +171,12 @@ ul.basicQuality li {
 }
 .lineText {
 	display: block;
+	cursor: pointer;
 	padding: 8px;
 }
 .lineText p {
-	color: white;
-	
+	cursor: pointer;
+	color: white;	
 	font-size: 1.3em;
 	font-family: 'Open Sans';
 	text-align: center;
@@ -171,7 +192,7 @@ a.click:hover, a.click2:hover {
 	color: white;	
 }
 a.click:hover div.lineText{
-	background: rgb(214,76,76);		
+	background: #337ab7;		
 }
 a.click:hover div.lineText p{
 	color: white;
@@ -191,6 +212,7 @@ a.click:hover div.lineText p{
 /*---------------------------------   UP BUTTON   -----------------------------*/
 /*******************************************************************************/
 #upButton {
+	display: none;
 	position: fixed;
 	top: 90%;
 	right: 10%;
@@ -199,10 +221,11 @@ a.click:hover div.lineText p{
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 a#button {
+	cursor: pointer;
 	color: white;
 	font-size: 1.5em;
 	padding: 20px 10px;
-	opacity: 0.3;
+	opacity: 1;
 }
 a#button:hover {
 	text-decoration: none;
@@ -222,11 +245,11 @@ a#button:hover div#upButton{
 	background: #fff;
 	position: fixed;
 	width: 900px;
-	height: 600px;	
+	height: 500px;	
 	top: 50%;
 	left: 50%;
 	margin-left: -450px;
-	margin-top: -300px;
+	margin-top: -250px;
 	z-index: 999;
 	text-align: center;
 }
@@ -256,7 +279,7 @@ a#button:hover div#upButton{
 	font-weight: 400;
 }
 #popup button:hover, #popup_2 button:hover, #popup_3 button:hover {
-	background: rgb(214,76,76);
+	background: #337ab7;
 }
 
 
@@ -349,6 +372,9 @@ footer {
 	div.block{ 
 		margin-top: 50px;
 	}
+	h1 {
+		margin-top: 5px;
+	}
 	.lineText p {
 		text-align: center;
 	}
@@ -405,15 +431,19 @@ footer {
 		display: list-item;
 		width: 100%;	
 	}
+	.navList {
+		margin-bottom: 10px;
+	}
 }
 
 @media only screen and (max-width : 992px) {
 	#popup, #popup_2, #popup_3 {
 		width: 768px;
-		height: 512px;	
+		height: 426px;	
 		margin-left: -384px;
-		margin-top: -256px;
+		margin-top: -213px;
 	}
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -439,6 +469,9 @@ footer {
 		display: list-item;
 		width: 100%;	
 	}
+	.formBlock{
+		padding-bottom: 0px;
+	}
 }
 
 @media only screen and (max-width : 640px) {
@@ -452,7 +485,7 @@ footer {
 		padding-top: 10vh;		
 	}
 	.navList li a {
-		font-size: 0.9em;
+		font-size: 0.9em;		
 	}
 	.col-sm-12 ul li{
 		display: inline;
@@ -468,9 +501,9 @@ footer {
 	}
 	#popup, #popup_2, #popup_3 {
 		width: 480px;
-		height: 320px;	
+		height: 266px;	
 		margin-left: -240px;
-		margin-top: -160px;
+		margin-top: -133px;
 	}
 	.empty2 {
 		display: none;
@@ -483,6 +516,9 @@ footer {
 @media only screen and (max-width : 480px) {
 	span.empty {
 		display: none;
+	}
+	.fa {
+		display: inline-block;
 	}
 	.blockMarginBottom {
 		margin-bottom: 40vh;
@@ -512,16 +548,16 @@ footer {
 		margin-right: 3px;
 	}
 	.navList {
-		padding-bottom: 10px;
+
 	}
 	nav h1, nav h2 {
 		font-size: 1.5em;
 	}
 	#popup, #popup_2, #popup_3 {
 		width: 320px;
-		height: 210px;	
+		height: 177px;	
 		margin-left: -160px;
-		margin-top: -105px;
+		margin-top: -88px;
 	}
 	.marginBlock {
 		min-height: 120vh;
