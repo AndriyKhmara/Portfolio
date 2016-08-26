@@ -3,7 +3,7 @@
 /*******************************************************************************/
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Monsterrat/Montserrat-Regular.ttf'), url('../fonts/Monsterrat/Montserrat-Regular.eot'), url('../fonts/Monsterrat/Montserrat-Regular.woff', '../fonts/Monsterrat/Montserrat-Regular.woff2');
+    src: url('../fonts/Monsterrat/Montserrat-Regular.ttf'), url('../fonts/Monsterrat/Montserrat-Regular.eot'), url('../fonts/Monsterrat/Montserrat-Regular.woff'), url('../fonts/Monsterrat/Montserrat-Regular.woff2');
    }
 @font-face {
     font-family: 'Open Sans';
@@ -15,7 +15,12 @@
 }
 /*******************************************************************************/
 /*---------------------------------   GRID   ---------------------------------*/
-/*******************************************************************************/   
+/*******************************************************************************/
+#test-id {
+	color: white;
+	font-size: 4em;
+	float: right;
+}
 body {	
 	background-size: cover;
 	background-attachment: fixed;
@@ -232,7 +237,7 @@ a#button:hover {
 	opacity: 1;
 }
 a#button:hover div#upButton{
-	opacity: none;
+	opacity: 0;
 }
 /*******************************************************************************/
 /*----------------------------   POPUP WINDOW   -------------------------------*/
